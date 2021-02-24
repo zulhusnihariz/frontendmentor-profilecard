@@ -1,0 +1,145 @@
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+:root {
+	--drkCyan: hsl(185, 75%, 39%);
+	--vDrkBlue: hsl(229, 23%, 23%);
+	--drkGrayBlue: hsl(227, 10%, 46%);
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background-color: var(--drkCyan);
+	line-height: 1.3;
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-family: "Kumbh Sans", sans-serif;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	margin-bottom: 25px;
+}
+
+.bg-img {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#top-pattern {
+	position: absolute;
+	right: 40%;
+	bottom: 50%;
+}
+#btm-pattern {
+	position: absolute;
+	left: 35%;
+	top: 45%;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-color: white;
+	border-radius: 25px;
+	height: 21.4375em;
+	width: 18.375em;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+}
+
+#card-pattern {
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+	object-fit: contain;
+	max-width: 100%;
+}
+
+#profile-photo {
+	position: absolute;
+	border-radius: 50%;
+	border: 7px solid white;
+	bottom: 50%;
+	transform: translate(-50%);
+}
+
+#age,
+#country {
+	color: var(--drkGrayBlue);
+}
+
+#name {
+	font-weight: 700;
+	margin-right: 5px;
+}
+
+#name-age-country {
+	margin-top: 80px;
+	border-bottom: 1px solid gray;
+}
+
+#li1 {
+	margin-bottom: 10px;
+}
+#country {
+	margin-top: 15px;
+	font-size: 0.875rem;
+}
+
+#stats {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+#follower,
+#likes,
+#photos {
+	font-weight: 700;
+	min-width: 80px;
+	margin: 10px 15px;
+	text-align: center;
+}
+
+.statswords {
+	font-weight: 400;
+	font-size: 0.875rem;
+	color: var(--drkGrayBlue);
+}
+
+.attribution {
+	visibility: hidden;
+}
+
+@media (min-width: 90em) {
+	#top-pattern {
+		right: 50%;
+		bottom: 40%;
+	}
+	#btm-pattern {
+		top: 50%;
+		left: 60%;
+	}
+
+	.attribution {
+		visibility: visible;
+	}
+}
